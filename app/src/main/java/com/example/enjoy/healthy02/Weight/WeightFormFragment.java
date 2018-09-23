@@ -35,8 +35,8 @@ public class WeightFormFragment extends Fragment{
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        onClickBack();
-            onClickAdd();
+        InitBackBtn();
+            InitSaveBtn();
     }
 
     @Nullable
@@ -45,7 +45,7 @@ public class WeightFormFragment extends Fragment{
         return inflater.inflate(R.layout.fragment_weight_form, container, false);
     }
 
-    public void onClickAdd() {
+    public void InitSaveBtn() {
         Button btn = getView().findViewById(R.id.weight_form_save_btn);
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -99,7 +99,7 @@ public class WeightFormFragment extends Fragment{
     }
 
 
-    public void onClickBack() {
+    public void InitBackBtn() {
         Button btn = getView().findViewById(R.id.weight_form_back_btn);
 
         btn.setOnClickListener(new View.OnClickListener() {

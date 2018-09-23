@@ -106,7 +106,7 @@ public class WeightFragment extends Fragment {
                             if(doc.get("date") != null){
                                 String _getDateFire = doc.get("date").toString();
                                 String _getWeightFire = doc.get("weight").toString();
-                                weights.add(new Weight(_getDateFire, "up", _getWeightFire));
+                                weights.add(new Weight(_getDateFire, "", _getWeightFire));
                             }
                         }
 
@@ -121,21 +121,17 @@ public class WeightFragment extends Fragment {
 
     public void addStatus(){
         int totalOb = weights.size();
-        if (weights.size() == 1){
-            weights.get(0).setStatus("");
-        }
-        if(weights.size() > 1 ){
-            for(int i = 1; i < totalOb;i++){
-                if(Double.parseDouble(weights.get(i).getWeight()) < Double.parseDouble(weights.get(i-1).getWeight())){
+        if(totalOb >= 1 ){
+            for(int i = 0; i < totalOb-1 ;i++){
+                if(Double.parseDouble(weights.get(i).getWeight()) < Double.parseDouble(weights.get(i+1).getWeight())){
                     weights.get(i).setStatus("DOWN");
-                }else if(Double.parseDouble(weights.get(i).getWeight()) > Double.parseDouble(weights.get(i-1).getWeight())){
+                }else if(Double.parseDouble(weights.get(i).getWeight()) > Double.parseDouble(weights.get(i+1).getWeight())){
                     weights.get(i).setStatus("UP");
                 }else{
                     weights.get(i).setStatus("");
                 }
             }
-        }else {
-            weights.get(totalOb-1).setStatus("");
+            weights.get(weights.size()-1).setStatus("");
         }
     }
 

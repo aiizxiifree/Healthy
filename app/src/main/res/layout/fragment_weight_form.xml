@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <Button
+                android:id="@+id/weight_form_back_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/Button"
+                android:text="BACK"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Date : "
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/weight_form_date"
+                    android:layout_width="245dp"
+                    android:layout_height="wrap_content"
+                    android:hint="dd-mm-yyyy"
+                    android:inputType="date" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Weight(KG) : "
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/weight_form_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="xxx" />
+
+            </LinearLayout>
+
+
+
+
+
+            <Button
+                android:id="@+id/weight_form_save_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/Button"
+                android:text="SAVE" />
+
+        </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

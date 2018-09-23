@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1094500603462",
+    "firebase_url": "https://db-android-95135.firebaseio.com",
+    "project_id": "db-android-95135",
+    "storage_bucket": "db-android-95135.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094500603462:android:4eb17809e7f29acb",
+        "android_client_info": {
+          "package_name": "com.example.enjoy.healthy02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094500603462-r6e9d90tv89p9jvbitbi9hcpf5qbn29b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfYQ3QYeKog5hc8b8jZ_ZcPR4FPGtS3EE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

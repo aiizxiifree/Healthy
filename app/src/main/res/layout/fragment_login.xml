@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ScrollView>
+
+
+    <ImageView
+        android:id="@+id/ImageView"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon"
+        android:layout_gravity="center"
+        />
+    <EditText
+        android:id="@+id/login_user_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/user"
+        android:hint="User ID"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/password"
+        android:hint="Password"
+        />
+    <Button
+        android:id="@+id/login_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:layout_below="@+id/Button"
+        android:layout_alignParentRight="true"
+        />
+    <TextView
+        android:id="@+id/login_register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="register new account"
+        android:layout_marginLeft="180dp"
+        android:textSize="7pt"/>
+
+</LinearLayout>

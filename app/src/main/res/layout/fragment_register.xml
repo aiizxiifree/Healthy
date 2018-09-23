@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+
+        <EditText
+            android:id="@+id/register_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/user"
+            android:hint="E-mail"
+            android:layout_marginTop="50dp"/>
+        <EditText
+            android:id="@+id/register_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/password"
+            android:hint="Password"
+            android:inputType="textPassword"
+
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/register_repassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/password"
+            android:hint="Re Password"
+            android:inputType="textPassword"
+
+            android:layout_marginBottom="5dp"/>
+
+
+
+
+        <Button
+            android:id="@+id/register_register_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DONE"
+            android:layout_below="@+id/Button"
+            android:layout_alignParentRight="true"
+            />
+    </LinearLayout>
+</ScrollView>

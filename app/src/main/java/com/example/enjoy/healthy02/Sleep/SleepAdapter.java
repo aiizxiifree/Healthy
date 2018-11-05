@@ -59,7 +59,6 @@ public class SleepAdapter extends ArrayAdapter<Sleep> {
     public String calculateTotal(String bed, String wake){
 
         Boolean stateCalHour = true;
-        Boolean stateCalMinute = true;
 
         String bedHour = bed.split(":")[0];
         String bedMinute = bed.split(":")[1];
@@ -69,22 +68,19 @@ public class SleepAdapter extends ArrayAdapter<Sleep> {
         int bedHourInt = Integer.parseInt(bedHour);
         int bedMinuteInt = Integer.parseInt(bedMinute);
         Log.d("adpter", bedHour+ " : " + bedMinute);
-        int countHour = 0, countMinute = 0;
+        int countMinute = 0;
+        int tempBedHour = bedHourInt;
+
 
         while(stateCalHour){
-            if((bedHourInt+countHour) % 24 == wakeHourInt && (bedMinuteInt + countMinute) % 60 == wakeMinuteInt){
-                break;
+            if((bedHourInt) % 24 == wakeHourInt && (bedMinuteInt + countMinute) % 60 == wakeMinuteInt){
+                stateCalHour = false;
             }else{
                 countMinute++;
                 if((bedMinuteInt + countMinute) % 60 == 0){
                     bedHourInt++;
                 }
-                if(countMinute == 0){
-                    countHour = Integer.parseInt(String.valueOf(countMinute / 60));
-
-                }
             }
-
         }
 
 
@@ -92,7 +88,8 @@ public class SleepAdapter extends ArrayAdapter<Sleep> {
 
 
 
-        String total = String.format("%02d:%02d", countHour, countMinute);
+
+        String total = String.format("%02d:%02d", bedHourInt-tempBedHour, countMinute%60);
 
         Log.d("adpter", "total" + total);
 

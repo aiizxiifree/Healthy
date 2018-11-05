@@ -124,7 +124,7 @@ public class WeightFragment extends Fragment {
         if(totalOb >= 1 ){
             for(int i = 0; i < totalOb-1 ;i++){
                 if(Double.parseDouble(weights.get(i).getWeight()) < Double.parseDouble(weights.get(i+1).getWeight())){
-                    weights.get(i).setStatus("DOWN");
+                    weights.get(i).setStatus( "DOWN");
                 }else if(Double.parseDouble(weights.get(i).getWeight()) > Double.parseDouble(weights.get(i+1).getWeight())){
                     weights.get(i).setStatus("UP");
                 }else{

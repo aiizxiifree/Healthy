@@ -12,10 +12,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.enjoy.healthy02.Sleep.SleepFormFragment;
+import com.example.enjoy.healthy02.Sleep.SleepFragment;
 import com.example.enjoy.healthy02.Weight.WeightFragment;
 import com.google.firebase.auth.FirebaseAuth;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MenuFragment extends Fragment {
@@ -25,6 +26,7 @@ public class MenuFragment extends Fragment {
     public MenuFragment() {
         _menu.add("BMI");
         _menu.add("Weight");
+        _menu.add("Sleep");
         _menu.add("Sign Out");
     }
 
@@ -56,7 +58,7 @@ public class MenuFragment extends Fragment {
                 if(position == 0 ){
                     getActivity().getSupportFragmentManager()
                             .beginTransaction()
-                            .replace(R.id.main_view, new BMIFragment())
+                            .replace(R.id.main_view, new SleepFormFragment())
                             .addToBackStack(null)
                             .commit();
                 }else if(position == 1){
@@ -65,7 +67,14 @@ public class MenuFragment extends Fragment {
                             .replace(R.id.main_view, new WeightFragment())
                             .addToBackStack(null)
                             .commit();
-                }else{
+                }else if(position == 2){
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.main_view, new SleepFragment())
+                            .addToBackStack(null)
+                            .commit();
+                }
+                else{
                     FirebaseAuth mAuth = FirebaseAuth.getInstance();
                     mAuth.signOut();
                     getActivity().getSupportFragmentManager()

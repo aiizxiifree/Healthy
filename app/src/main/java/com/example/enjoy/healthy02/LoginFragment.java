@@ -40,7 +40,7 @@ public class LoginFragment extends android.support.v4.app.Fragment{
         super.onActivityCreated(savedInstanceState);
         InitLoginBtn();
         InitRegisterBtn();
-
+        loginAlready();
 
     }
 
@@ -106,6 +106,18 @@ public class LoginFragment extends android.support.v4.app.Fragment{
                         .commit();
             }
         });
+    }
+
+    public void loginAlready(){
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        FirebaseUser user = mAuth.getCurrentUser();
+        if(user != null){
+            getActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.main_view, new MenuFragment())
+                    .addToBackStack(null)
+                    .commit();
+        }
     }
 
 

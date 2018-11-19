@@ -94,7 +94,7 @@ public class SleepFragment extends Fragment{
         //sleeps.clear();
 
 
-        final ListView listViewSleeps = getView().findViewById(R.id.sleep_list);
+        final ListView  listViewSleeps = getView().findViewById(R.id.sleep_list);
 
         final SleepAdapter _sleepAdapter = new SleepAdapter(getActivity(),
                 R.layout.fragment_sleep_item,

@@ -11,13 +11,22 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import com.example.enjoy.healthy02.Post.PostFragment;
 import com.example.enjoy.healthy02.Sleep.SleepFormFragment;
 import com.example.enjoy.healthy02.Sleep.SleepFragment;
 import com.example.enjoy.healthy02.Weight.WeightFragment;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.io.IOException;
 import java.util.ArrayList;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class MenuFragment extends Fragment {
 
@@ -27,7 +36,9 @@ public class MenuFragment extends Fragment {
         _menu.add("BMI");
         _menu.add("Weight");
         _menu.add("Sleep");
+        _menu.add("Post");
         _menu.add("Sign Out");
+
     }
 
     @Nullable
@@ -73,8 +84,13 @@ public class MenuFragment extends Fragment {
                             .replace(R.id.main_view, new SleepFragment())
                             .addToBackStack(null)
                             .commit();
-                }
-                else{
+                }else if (position == 3){
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.main_view, new PostFragment())
+                            .addToBackStack(null)
+                            .commit();
+                }else{
                     FirebaseAuth mAuth = FirebaseAuth.getInstance();
                     mAuth.signOut();
                     getActivity().getSupportFragmentManager()

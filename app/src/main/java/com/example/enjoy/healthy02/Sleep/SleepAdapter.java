@@ -56,7 +56,8 @@ public class SleepAdapter extends ArrayAdapter<Sleep> {
         return sleepItem;
     }
 
-    public String calculateTotal(String bed, String wake){
+    public String calculateTotal(String bed, String wake)
+    {
 
         Boolean stateCalHour = true;
 

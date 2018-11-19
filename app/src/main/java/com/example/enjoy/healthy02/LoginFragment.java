@@ -58,7 +58,7 @@ public class LoginFragment extends android.support.v4.app.Fragment{
                     Toast.makeText(getActivity(), "Login failed", Toast.LENGTH_SHORT).show();
                 }else {
 
-                    mAuth.signInWithEmailAndPassword(_userIdStr, _passwordStr).addOnSuccessListener(new OnSuccessListener<AuthResult>(){
+                    mAuth.signInWithEmailAndPassword(_userIdStr, _passwordStr).addOnSuccessListener(    new OnSuccessListener<AuthResult>(){
                         @Override
                         public void onSuccess(AuthResult authResult) {
                             FirebaseUser user = authResult.getUser();
